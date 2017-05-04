@@ -1,0 +1,55 @@
+!!! 5
+%html
+%head
+  %title Helping Hands
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body{style:"margin-bottom:60px;"}
+  %nav.navbar.navbar-inverse
+    .container
+      .navbar-header
+        %a.navbar-brand{:href => root_path} WebSiteName
+      %ul.nav.navbar-nav
+        %li.active
+          %a{:href => root_path} Home
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            About
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => home_board_member_path} Board Members
+            %li
+              %a{:href => home_our_staff_path} Our Staff
+        %li
+          %a{:href => "#"} Brochure
+        %li
+          %a{:href => home_admissions_path} Admissions
+        %li
+          %a{:href => "#"} News & Events
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => home_contact_us_path}
+            %span.glyphicon.glyphicon-user
+            Contact Us
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Other
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Circular Activities
+            %li
+              %a{:href => home_gallery_path} Gallery
+            %li
+              %a{:href => home_faq_path} FAQ
+
+  .container
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert alert-info"
+  = yield
+
+  %footer.navbar-fixed-bottom
+    %p &copy; 2017 Ilm School of Excellence. All Rights Reserved.

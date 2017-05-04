@@ -1,0 +1,27 @@
+.container
+  .row
+    .col-sm-6
+      = image_tag 'faq.jpg'
+    .col-sm-6
+      #accordion.panel-group
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse1"} What about Hifz?
+          #collapse1.panel-collapse.collapse.in
+            .panel-body
+              InshaAllah Extra classes of Hifz will be started from 1st Std. (most probably early morning before the 1st period) depending upon the capability of the student.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse2"} Which school of thought will be followed?
+          #collapse2.panel-collapse.collapse
+            .panel-body
+              Quran and Authentic Hadeeth.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3"} What are the extra curricular activities ?
+          #collapse3.panel-collapse.collapse
+            .panel-body
+              Excursions, Class activities, Taekwondo (from 1st Std.), Annual Sports, EPS (English Public Speaking), APS (Arabic Public Speaking) etc.

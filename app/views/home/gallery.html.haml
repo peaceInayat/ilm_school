@@ -1,0 +1,37 @@
+.container
+  .center
+    %h2 Gallery
+    %p.lead Explore our school photo gallery...
+
+  %ul.nav.nav-pills.nav-justified
+    %li.active
+      %a{"data-toggle" => "pill", :href => "#home"} Home
+    %li
+      %a{"data-toggle" => "pill", :href => "#menu1"} Annual Function
+    %li
+      %a{"data-toggle" => "pill", :href => "#menu2"} School
+    %li
+      %a{"data-toggle" => "pill", :href => "#menu3"} Sports day
+  .tab-content
+    #home.tab-pane.fade.in.active
+      .row
+        = (1..12).each do |i|
+          .col-sm-3
+            = image_tag ('a'+i.to_s),  width:'300px',height: '200px'
+    #menu1.tab-pane.fade
+      .row
+        = (1..12).each do |i|
+          .col-sm-3
+            = image_tag ('a'+i.to_s),  width:'300px',height: '200px'
+    #menu2.tab-pane.fade
+      .row
+        = (1..12).each do |i|
+          .col-sm-3
+            = image_tag ('a'+i.to_s),  width:'300px',height: '200px'
+    #menu3.tab-pane.fade
+      .row
+        = (1..12).each do |i|
+          .col-sm-3
+            = image_tag ('a'+i.to_s),  width:'300px',height: '200px'
+
+
