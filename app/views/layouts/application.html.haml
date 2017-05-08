@@ -1,50 +1,52 @@
 !!! 5
 %html
 %head
-  %title Helping Hands
+  %title Ilm School
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
+  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
 
 %body{style:"margin-bottom:60px;"}
   %nav.navbar.navbar-inverse
     .container
       .navbar-header
-        %a.navbar-brand{:href => root_path} WebSiteName
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => root_path} Home
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            About
-            %span.caret
-          %ul.dropdown-menu
+        %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to image_tag('ilm_logo.png'), root_path
+      #myNavbar.collapse.navbar-collapse
+        %div
+          %ul.nav.navbar-nav.navbar-left
             %li
-              %a{:href => home_board_member_path} Board Members
+              %a{:href => root_path}Home
+            %li.dropdown
+              %a.dropbtn
+                About
+                %span.caret
+              .dropdown-content
+                %a{:href => home_board_member_path} Director In Charge
+                %a{:href => home_board_member_path} Board Members
+                %a{:href => home_our_staff_path} Our Staff
             %li
-              %a{:href => home_our_staff_path} Our Staff
-        %li
-          %a{:href => "#"} Brochure
-        %li
-          %a{:href => home_admissions_path} Admissions
-        %li
-          %a{:href => "#"} News & Events
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => home_contact_us_path}
-            %span.glyphicon.glyphicon-user
-            Contact Us
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Other
-            %span.caret
-          %ul.dropdown-menu
+              %a{:href => home_curriculum_path}Curriculum
+          %ul.nav.navbar-nav.navbar-right
             %li
-              %a{:href => "#"} Circular Activities
+              %a{:href => home_admissions_path}Admissions
             %li
-              %a{:href => home_gallery_path} Gallery
-            %li
-              %a{:href => home_faq_path} FAQ
+              %a{:href => contact_us_path}
+                %span.glyphicon.glyphicon-user
+                Contact Us
+            %li.dropdown
+              %a.dropbtn
+                Other
+                %span.caret
+              .dropdown-content
+                %a{:href => "brochure.pdf", target:'_blank'} Brochure
+                %a{:href => home_gallery_path} Gallery
+                %a{:href => home_faq_path} FAQ
 
   .container
     - flash.each do |name, msg|
@@ -53,3 +55,5 @@
 
   %footer.navbar-fixed-bottom
     %p &copy; 2017 Ilm School of Excellence. All Rights Reserved.
+
+  %script{:src => "js/bootstrap.min.js"}
