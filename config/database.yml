@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: ilm_production
-  username: ilm
-  password: <%= ENV['ILM_DATABASE_PASSWORD'] %>
+  database: ilm_development
+  username: root
+  password: edutor123

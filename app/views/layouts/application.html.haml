@@ -27,14 +27,14 @@
                 About
                 %span.caret
               .dropdown-content
-                %a{:href => home_board_member_path} Director In Charge
-                %a{:href => home_board_member_path} Board Members
-                %a{:href => home_our_staff_path} Our Staff
+                %a{:href => board_member_path} Director In Charge
+                %a{:href => board_member_path} Board Members
+                %a{:href => our_staff_path} Our Staff
             %li
-              %a{:href => home_curriculum_path}Curriculum
+              %a{:href => curriculum_path}Curriculum
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a{:href => home_admissions_path}Admissions
+              %a{:href => admissions_path}Admissions
             %li
               %a{:href => contact_us_path}
                 %span.glyphicon.glyphicon-user
@@ -45,8 +45,8 @@
                 %span.caret
               .dropdown-content
                 %a{:href => "brochure.pdf", target:'_blank'} Brochure
-                %a{:href => home_gallery_path} Gallery
-                %a{:href => home_faq_path} FAQ
+                %a{:href => gallery_path} Gallery
+                %a{:href => faq_path} FAQ
 
   .container
     - flash.each do |name, msg|
@@ -55,5 +55,3 @@
 
   %footer.navbar-fixed-bottom
     %p &copy; 2017 Ilm School of Excellence. All Rights Reserved.
-
-  %script{:src => "js/bootstrap.min.js"}

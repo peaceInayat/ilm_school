@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'home/contact_us', :as=>'contact_us'
-  get 'home/admissions'
-  get 'home/curriculum'
-  get 'home/board_member'
-  get 'home/our_staff'
-  get 'home/faq'
-  get "home/brochure.pdf" => redirect("/brochure.pdf")
-  get 'home/gallery'
+  get '/contact_us', to: 'home#contact_us'
+  get '/admissions', to: 'home#admissions'
+  get '/curriculum', to: 'home#curriculum'
+  get '/board_member', to: 'home#board_member'
+  get '/our_staff', to: 'home#our_staff'
+  get '/faq', to: 'home#faq'
+  get '/gallery', to: 'home#gallery'
   root 'home#welcome'
 end

@@ -15,23 +15,31 @@
   .tab-content{style:'margin-top:2%;'}
     #home.tab-pane.fade.in.active
       .row
-        = (1..12).each do |i|
+        -(1..12).each do |i|
           .col-sm-3
-            = image_tag ('a'+i.to_s),  class:'img-responsive thumbnail'
+            = image_tag ('a'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
+      .row
+        -(1..12).each do |i|
+          .col-sm-3
+            = image_tag ('p'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
+      .row
+        -(1..12).each do |i|
+          .col-sm-3
+            = image_tag ('p'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
     #menu1.tab-pane.fade
       .row
-        = (1..12).each do |i|
+        -(1..12).each do |i|
           .col-sm-3
-            = image_tag ('a'+i.to_s),  class:'img-responsive thumbnail'
+            = image_tag ('a'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
     #menu2.tab-pane.fade
       .row
-        = (1..12).each do |i|
+        -(1..12).each do |i|
           .col-sm-3
-            = image_tag ('a'+i.to_s),  class:'img-responsive thumbnail'
+            = image_tag ('p'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
     #menu3.tab-pane.fade
       .row
-        = (1..12).each do |i|
+        -(1..12).each do |i|
           .col-sm-3
-            = image_tag ('a'+i.to_s),  class:'img-responsive thumbnail'
+            = image_tag ('p'+i.to_s+'.jpg'),  class:'img-responsive thumbnail'
 
 
